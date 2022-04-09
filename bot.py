@@ -3,7 +3,11 @@ from discord.ext import commands
 import aiohttp
 import os
 
-bot = commands.Bot(command_prefix=commands.when_mentioned_or("g-"))
+intents = discord.Intents.default()
+intents.typing = False
+intents.presences = False
+
+bot = commands.Bot(command_prefix=commands.when_mentioned_or("g-"), intents=intents)
 
 @bot.event
 async def on_ready():
