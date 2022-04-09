@@ -3,7 +3,7 @@ from discord.ext import commands
 import aiohttp
 import os
 
-bot = commands.Bot(command_prefix="g-")
+bot = commands.Bot(command_prefix="_")
 
 @bot.event
 async def on_ready():
