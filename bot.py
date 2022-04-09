@@ -25,7 +25,7 @@ async def ggl(ctx, *, search):
       )
       embed.add_field(
         name = js['items'][0]['title'],
-        value = f"[{js['items'][0]['snippet'][50] + "..."}]({js['items'][0]['link']})"
+        value = f"[{js['items'][0]['snippet'][:50] + "..."}]({js['items'][0]['link']})"
       )
     
       await ctx.send(embed=embed)
