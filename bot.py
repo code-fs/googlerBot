@@ -17,7 +17,7 @@ async def on_ready():
 async def ggl(ctx, *, search):
   async with aiohttp.ClientSession() as session:
     async with session.get(f"https://www.googleapis.com/customsearch/v1?key={os.environ['API_KEY']}&cx=e367fa34ef717987e&q={search}") as resp:
-      js = resp.json()
+      js = await resp.json()
     
       embed = discord.Embed(
         title = f"Search Results:",
