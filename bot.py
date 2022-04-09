@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import aiohttp
+import os
 
 bot = commands.Bot(command_prefix="g-")
 
