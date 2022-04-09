@@ -16,7 +16,7 @@ async def ggl(ctx, *, search):
       js = resp.json()
     
       embed = discord.Embed(
-        title = f"Search Results For {search.capitalize()}:",
+        title = f"Search Results:",
         color = 0xFFFFF1
       )
       embed.add_field(
