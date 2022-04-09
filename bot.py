@@ -26,4 +26,4 @@ async def ggl(ctx, *, search):
     
       await ctx.send(embed=embed)
     
-bot.run(os.environ["DISCORD_TOKEN"])
+bot.run(os.environ['DISCORD_TOKEN'])
