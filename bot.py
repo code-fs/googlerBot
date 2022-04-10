@@ -30,23 +30,28 @@ async def ggl(ctx, *, search):
       )
       embed.add_field(
         name = js['items'][0]['title'],
-        value = f"[{js['items'][0]['snippet'][:50]}...]({js['items'][0]['link']})"
+        value = f"[{js['items'][0]['snippet'][:50]}...]({js['items'][0]['link']})",
+        inline = False
       )
       embed.add_field(
         name = js['items'][1]['title'],
-        value = f"[{js['items'][1]['snippet'][:50]}...]({js['items'][0]['link']})"
+        value = f"[{js['items'][1]['snippet'][:50]}...]({js['items'][0]['link']})",
+        inline = False
       )
       embed.add_field(
         name = js['items'][2]['title'],
-        value = f"[{js['items'][2]['snippet'][:50]}...]({js['items'][0]['link']})"
+        value = f"[{js['items'][2]['snippet'][:50]}...]({js['items'][0]['link']})",
+        inline = False
       )
       embed.add_field(
         name = js['items'][3]['title'],
-        value = f"[{js['items'][3]['snippet'][:50]}...]({js['items'][0]['link']})"
+        value = f"[{js['items'][3]['snippet'][:50]}...]({js['items'][0]['link']})",
+        inline = False
       )
       embed.add_field(
         name = js['items'][4]['title'],
-        value = f"[{js['items'][5]['snippet'][:50]}...]({js['items'][0]['link']})"
+        value = f"[{js['items'][5]['snippet'][:50]}...]({js['items'][0]['link']})",
+        inline = False
       )
     
       await ctx.send(embed=embed)
