@@ -6,7 +6,6 @@ import os
 intents = discord.Intents.default()
 intents.typing = False
 intents.presences = False
-ntents.message_content = True
 
 client = commands.Bot(command_prefix=commands.when_mentioned_or("g-"), intents=intents)
 client.help_command = None
