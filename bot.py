@@ -7,18 +7,18 @@ intents = discord.Intents.default()
 intents.typing = False
 intents.presences = False
 
-bot = commands.Bot(command_prefix=commands.when_mentioned_or("g-"), intents=intents)
-bot.help_command = None
+client = commands.Bot(command_prefix=commands.when_mentioned_or("g-"), intents=intents)
+client.help_command = None
 
-@bot.event
+@client.event
 async def on_ready():
   print("Ready!")
 
-@bot.command()
+@client.command()
 async def help(ctx):
   await ctx.send("`ggl`")
   
-@bot.command()
+@client.command()
 async def ggl(ctx, *, search):
   async with aiohttp.ClientSession() as session:
     async with session.get(f"https://www.googleapis.com/customsearch/v1?key={os.environ['API_KEY']}&cx=e367fa34ef717987e&q={search}") as resp:
@@ -51,4 +51,4 @@ async def ggl(ctx, *, search):
     
       await ctx.send(embed=embed)
     
-bot.run(os.environ['DISCORD_TOKEN'])
+client.run(os.environ['DISCORD_TOKEN'])
