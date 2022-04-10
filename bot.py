@@ -8,7 +8,7 @@ intents.typing = False
 intents.presences = False
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("g-"), intents=intents)
-bot.help_command = False
+bot.help_command = None
 
 @bot.event
 async def on_ready():
