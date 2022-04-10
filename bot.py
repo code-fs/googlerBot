@@ -8,10 +8,15 @@ intents.typing = False
 intents.presences = False
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("g-"), intents=intents)
+bot.help_command = False
 
 @bot.event
 async def on_ready():
   print("Ready!")
+
+@bot.command()
+async def help(ctx):
+  await ctx.send("`ggl`")
   
 @bot.command()
 async def ggl(ctx, *, search):
